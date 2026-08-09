@@ -15,3 +15,14 @@
     alt="Reema Jabeen GitHub Profile Banner"
   />
 </picture>
+<br>
+
+<div align="center">
+
+<img
+  src="./output/stats.svg"
+  width="700"
+  alt="GitHub Statistics"
+/>
+
+</div>
