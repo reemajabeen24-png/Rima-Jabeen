@@ -1,6 +1,17 @@
-# Rima-Jabeen24
-<div align="center">
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="./assets/dark.svg"
+  />
 
-<img src="./assets/banner-preview.svg" width="100%" alt="Reema Jabeen GitHub Profile Banner">
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="./assets/light.svg"
+  />
 
-</div>
+  <img
+    src="./assets/dark.svg"
+    width="100%"
+    alt="Reema Jabeen GitHub Profile Banner"
+  />
+</picture>
