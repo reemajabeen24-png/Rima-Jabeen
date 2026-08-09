@@ -1,0 +1,201 @@
+const fs = require("fs");
+
+const USERNAME = "reemajabeen24";
+const TOKEN = process.env.GH_TOKEN;
+
+if (!TOKEN) {
+  throw new Error("GH_TOKEN is not available.");
+}
+
+async function githubRequest(endpoint) {
+  const response = await fetch(
+    `https://api.github.com${endpoint}`,
+    {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `GitHub API error: ${response.status} ${response.statusText}`
+    );
+  }
+
+  return response.json();
+}
+
+async function main() {
+  console.log(`Fetching GitHub statistics for ${USERNAME}...`);
+
+  const user = await githubRequest(`/users/${USERNAME}`);
+
+  const repositories = await githubRequest(
+    `/users/${USERNAME}/repos?per_page=100`
+  );
+
+  const publicRepositories = repositories.filter(
+    (repo) => !repo.fork && !repo.private
+  );
+
+  const totalStars = publicRepositories.reduce(
+    (total, repo) => total + repo.stargazers_count,
+    0
+  );
+
+  const totalForks = publicRepositories.reduce(
+    (total, repo) => total + repo.forks_count,
+    0
+  );
+
+  const stats = {
+    repositories: publicRepositories.length,
+    followers: user.followers,
+    following: user.following,
+    stars: totalStars,
+    forks: totalForks,
+  };
+
+  const svg = `
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="700"
+  height="300"
+  viewBox="0 0 700 300"
+>
+
+  <rect
+    width="700"
+    height="300"
+    rx="20"
+    fill="#0A101F"
+    stroke="#22D3EE"
+    stroke-width="1"
+  />
+
+  <text
+    x="40"
+    y="55"
+    fill="#22D3EE"
+    font-family="monospace"
+    font-size="22"
+    font-weight="bold"
+  >
+    GITHUB.STATS
+  </text>
+
+  <text
+    x="40"
+    y="85"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="13"
+  >
+    @${USERNAME}
+  </text>
+
+  <text
+    x="40"
+    y="135"
+    fill="#94A3B8"
+    font-family="monospace"
+    font-size="14"
+  >
+    PUBLIC REPOSITORIES
+  </text>
+
+  <text
+    x="620"
+    y="135"
+    text-anchor="end"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="22"
+  >
+    ${stats.repositories}
+  </text>
+
+  <text
+    x="40"
+    y="175"
+    fill="#94A3B8"
+    font-family="monospace"
+    font-size="14"
+  >
+    FOLLOWERS
+  </text>
+
+  <text
+    x="620"
+    y="175"
+    text-anchor="end"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="22"
+  >
+    ${stats.followers}
+  </text>
+
+  <text
+    x="40"
+    y="215"
+    fill="#94A3B8"
+    font-family="monospace"
+    font-size="14"
+  >
+    STARS
+  </text>
+
+  <text
+    x="620"
+    y="215"
+    text-anchor="end"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="22"
+  >
+    ${stats.stars}
+  </text>
+
+  <text
+    x="40"
+    y="255"
+    fill="#94A3B8"
+    font-family="monospace"
+    font-size="14"
+  >
+    FORKS
+  </text>
+
+  <text
+    x="620"
+    y="255"
+    text-anchor="end"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="22"
+  >
+    ${stats.forks}
+  </text>
+
+</svg>
+`;
+
+  fs.mkdirSync("output", { recursive: true });
+
+  fs.writeFileSync(
+    "output/stats.svg",
+    svg.trim(),
+    "utf8"
+  );
+
+  console.log("Stats SVG generated successfully.");
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
