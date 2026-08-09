@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: 20
 
-      -       - name: Run stats script
-    env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    run: node stats/stats.js
+      - name: Run stats script
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node stats/stats.js
 
       - name: Commit updated stats
         run: |
