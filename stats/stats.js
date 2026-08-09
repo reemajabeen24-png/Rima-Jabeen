@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const USERNAME = "reemajabeen24";
+const USERNAME = "reemajabeen24-png";
 const TOKEN = process.env.GH_TOKEN;
 
 if (!TOKEN) {
