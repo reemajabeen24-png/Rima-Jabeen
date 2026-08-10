@@ -1,10 +1,10 @@
 const fs = require("fs");
 
 const USERNAME = "reemajabeen24-png";
-const TOKEN = process.env.GH_TOKEN;
+const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 
 if (!TOKEN) {
-  throw new Error("GH_TOKEN is not available.");
+  throw new Error("GitHub token is not available.");
 }
 
 async function githubRequest(endpoint) {
