@@ -30,26 +30,32 @@
   width="700"
   alt="GitHub Statistics"
 />
+## 🚀 Featured Projects
+
+### 🔹 [AI & Full Stack Developer Portfolio](https://github.com/reemajabeen24-png/ai-fullstack-portfolio)
+
+A modern, responsive portfolio website showcasing AI and full-stack development skills, projects, experience, and contact information.
+
+**Tech:** React.js • JavaScript • Tailwind CSS • Vite • Framer Motion
+
+### 🔹 [Real-Time Chat Application](https://github.com/reemajabeen24-png/real-time-chat-application)
+
+A real-time communication application focused on interactive messaging and modern web application development.
+
+**Tech:** Web Development • Real-Time Communication
+
+### 🔹 [Weather Forecast Application](https://github.com/reemajabeen24-png/Weather-Forecast-App)
+
+A responsive weather application that retrieves real-time weather information using the OpenWeatherMap REST API, with asynchronous JavaScript and dynamic UI updates.
+
+**Tech:** HTML5 • CSS3 • JavaScript • REST API • Fetch API • Async/Await
+
+### 🔹 [Randomized Machine Learning Algorithms](https://github.com/reemajabeen24-png/Randomized-machine-learning-algorithms)
+
+A machine-learning project exploring randomized algorithms for efficient medical diagnosis.
+
+**Tech:** Python • Machine Learning • Data Analysis
 
 </div>
 ## 🚀 Featured Projects
 
-### 🔹 Real-Time Document Editor
-Collaborative document editing application with real-time updates and database integration.
-
-**Tech:** React • Node.js • Express • MongoDB
-
-### 🔹 News API Integration
-A web application that fetches and displays real-time news using an external REST API.
-
-**Tech:** HTML • CSS • JavaScript • REST API
-
-### 🔹 NLP Text Summarization
-A Python-based NLP project that processes text and generates concise summaries.
-
-**Tech:** Python • NLP • Sumy
-
-### 🔹 Full Stack Web Projects
-A collection of frontend and backend projects demonstrating responsive UI development, API integration, and full-stack application development.
-
-**Tech:** HTML • CSS • JavaScript • React • Node.js • Express • MongoDB
