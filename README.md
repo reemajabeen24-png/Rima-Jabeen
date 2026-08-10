@@ -59,6 +59,7 @@ A machine-learning project exploring randomized algorithms for efficient medical
 </div>
 ## 🛠️ Tech Stack
 
+
 ### 💻 Programming Languages
 <p>
   <img src="https://skillicons.dev/icons?i=python,java,js,html,css" alt="Programming Languages">
@@ -87,6 +88,13 @@ A machine-learning project exploring randomized algorithms for efficient medical
 ### 🧰 Tools & Platforms
 <p>
   <img src="https://skillicons.dev/icons?i=git,github,vscode,vercel" alt="Tools and Platforms">
+</p>
+## 📌 Profile Highlights
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Focus-AI%20%26%20Full%20Stack-blue?style=for-the-badge" alt="Focus">
+  <img src="https://img.shields.io/badge/Projects-5+-green?style=for-the-badge" alt="Projects">
+  <img src="https://img.shields.io/badge/Developer-Open%20to%20Opportunities-orange?style=for-the-badge" alt="Open to Opportunities">
 </p>
 ## 🤝 Let's Connect
 
