@@ -36,7 +36,7 @@
 
 A modern, responsive portfolio website showcasing AI and full-stack development skills, projects, experience, and contact information.
 
-**Tech:** React.js • JavaScript • Tailwind CSS • Vite • Framer Motion
+**Tech:** React.js • JavaScript  • Vite • Framer Motion
 
 ### 🔹 [Real-Time Chat Application](https://github.com/reemajabeen24-png/real-time-chat-application)
 
@@ -57,5 +57,35 @@ A machine-learning project exploring randomized algorithms for efficient medical
 **Tech:** Python • Machine Learning • Data Analysis
 
 </div>
-## 🚀 Featured Projects
+## 🛠️ Tech Stack
+
+### 💻 Programming Languages
+<p>
+  <img src="https://skillicons.dev/icons?i=python,java,js,html,css" alt="Programming Languages">
+</p>
+
+### ⚛️ Frontend Development
+<p>
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind" alt="Frontend Technologies">
+</p>
+
+### 🔧 Backend & APIs
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express" alt="Backend Technologies">
+</p>
+
+### 🗄️ Database
+<p>
+  <img src="https://skillicons.dev/icons?i=mongodb,mysql" alt="Database Technologies">
+</p>
+
+### 🤖 AI / Machine Learning
+<p>
+  <img src="https://skillicons.dev/icons?i=python,tensorflow" alt="AI and Machine Learning">
+</p>
+
+### 🧰 Tools & Platforms
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,vercel" alt="Tools and Platforms">
+</p>
 
