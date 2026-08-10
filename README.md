@@ -18,11 +18,7 @@
 <br>
 
 <div align="center">
-## 📊 GitHub Statistics
 
-<p align="center">
-  <img src="./output/stats.svg" alt="GitHub Statistics" width="700">
-</p>
 
 <img
   src="./output/stats.svg"
