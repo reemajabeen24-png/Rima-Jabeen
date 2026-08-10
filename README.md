@@ -18,7 +18,11 @@
 <br>
 
 <div align="center">
+## 🐍 Contribution Activity
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation">
+</p>
 
 <img
   src="./output/stats.svg"
